@@ -4,19 +4,213 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Vite App</title>
+    <style>
+
+
+body{
+  display: flex;
+  width: 100vh;
+  height: 100vh ;
+  justify-content: center;
+  align-items: center;
+  background: rgb(121,67,9);
+background: linear-gradient(90deg, rgba(121,67,9,1) 7%, rgba(2,0,36,1) 26%, rgba(0,212,255,1) 100%);
+}
+
+.cubespace{
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+
+.cube{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 10s infinite linear;
+}
+
+.cube-face{
+  position: absolute;
+  width: 200px;
+  height:200px;
+  background-color: black;
+  
+}
+
+.front-face{
+  transform: rotateX(0deg) translateZ(100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  
+}
+
+
+.back-face{
+  
+  transform: rotateX(-180deg) translateZ(100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+
+
+
+}
+
+.left-face{
+  
+  transform: rotateY(-90deg) translateZ(100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  
+}
+.right-face{
+  
+  transform: rotateY(90deg) translateZ(100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  
+
+}
+
+.up-face{
+  
+  transform: rotateX(90deg) translateZ(100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+
+.down-face{
+  
+  transform: rotateX(-90deg) translateZ(100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+} 
+
+.front-face div{
+  padding: 10px;
+  background-color: #f52e2e;
+}
+
+.right-face div{
+  padding: 10px;
+  background-color: yellow;
+}
+
+
+.back-face div{
+  padding: 10px;
+  background-color: blue;
+}
+
+.left-face div{
+  padding: 10px;
+  background-color: green;
+}
+
+.up-face div{
+  padding: 10px;
+  background-color: rgb(255, 187, 0);
+}
+
+
+.down-face div{
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+    </style>
   </head>
   <body>
     <a href = "timer.html">Timer-JS</a>
     <div class="cubespace">
       <div class="cube">
-        <div class="cube-face front-face">Front</div>
-        <div class="cube-face back-face">Back</div>
-        <div class="cube-face right-face">Right</div>
-        <div class="cube-face left-face">Left</div>
-        <div class="cube-face up-face">Up Face</div>
-        <div class="cube-face down-face">Down</div>
+        <div class="cube-face front-face">
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+
+
+
+        </div>
+        <div class="cube-face back-face"><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div></div>
+        <div class="cube-face right-face"><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      
+      
+      </div>
+        <div class="cube-face left-face"><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div></div>
+        <div class="cube-face up-face"><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div></div>
+        <div class="cube-face down-face"><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div></div>
 
 
 
